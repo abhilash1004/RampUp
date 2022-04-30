@@ -10,5 +10,4 @@ public class RampUpServerApplication {
 		SpringApplication.run(RampUpServerApplication.class, args);
 		System.out.println("Hello World");
 	}
-
 }
