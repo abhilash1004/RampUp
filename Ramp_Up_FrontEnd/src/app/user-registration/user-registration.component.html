@@ -1,0 +1,38 @@
+<h2>User Registration</h2>
+<!-- <form (ngSubmit)="onSubmit()" #userForm="ngForm">
+    <div class="form-group">
+        <label for="name">Name</label><br>
+        <input type="text" id="name"
+        [(ngModel)]="user.name"
+        placeholder="Enter Name">
+    </div><br>
+    <div class="form-group">
+        <label for="username">Username</label><br>
+        <input type="text" id="username"
+        [(ngModel)]=""user.username
+        placeholder="Enter Username">
+    </div><br>
+    <div class="form-group">
+        <label for="password">Password</label><br>
+        <input type="password" id="password"
+        [(ngModel)]="user.password">
+    </div><br>
+    <button type="submit"
+    class="btn btn-info">Submit</button>
+</form> -->
+<table>
+    <thead>
+        <tr>
+            <td>Name</td>
+            <td>Username</td>
+            <td>Password</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.name}}</td>
+            <td>{{user.username}}</td>
+            <td>{{user.password}}</td>
+        </tr>
+    </tbody>
+</table>
