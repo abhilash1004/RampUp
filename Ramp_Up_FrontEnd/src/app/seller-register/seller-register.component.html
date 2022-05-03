@@ -1,5 +1,5 @@
 <h1>Seller Registration</h1>
-<div>
+<div class="container">
     <form [formGroup]="sellerRegisterForm">
         <div class="form-group">
             <label for="organization-name">Organization Name</label><br>
@@ -16,9 +16,16 @@
             formControlName="organizationDescription"
             rows="5"
             cols="40"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="organization-email">Organization Email</label><br>
+            <input type="text" id="organization-email"
+            class="form-control"
+            placeholder="Enter Organization Email"
+            formControlName="organizationEmail">
         </div><br>
         <div>
-            <button type="submit">Submit</button>
+            <button type="submit" class="btn btn-primary">Submit</button>
         </div>
 </form>
 </div>

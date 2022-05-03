@@ -11,7 +11,8 @@ export class SellerRegisterComponent implements OnInit {
   constructor(public fb: FormBuilder) { }
   sellerRegisterForm = this.fb.group({
     organization: [null, [Validators.required]],
-    organizationDescription: [null, [Validators.required]]
+    organizationDescription: [null, [Validators.required]],
+    organizationEmail: [null, [Validators.required]]
   });
 
   ngOnInit(): void {
