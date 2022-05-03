@@ -1,0 +1,24 @@
+<h1>Seller Registration</h1>
+<div>
+    <form [formGroup]="sellerRegisterForm">
+        <div class="form-group">
+            <label for="organization-name">Organization Name</label><br>
+            <input type="text" id="organization-name"
+            class="form-control"
+            placeholder="Enter Organization Name"
+            formControlName="organization">
+        </div>
+        <div class="form-group">
+            <label for="organization-description">Organization Description</label><br>
+            <textarea id="organization-description"
+            class="form-control"
+            placeholder="Enter Organization Description"
+            formControlName="organizationDescription"
+            rows="5"
+            cols="40"></textarea>
+        </div><br>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+</form>
+</div>
