@@ -2,7 +2,7 @@ package com.rampup.controller;
 
 import java.util.Optional;
 
-import org.json.simple.JSONObject;   
+import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.stereotype.Controller;
 
 import com.rampup.model.User;
 import com.rampup.repo.UsersRepository;
@@ -21,6 +20,9 @@ import com.rampup.repo.UsersRepository;
 @RestController
 @CrossOrigin(origins = "*")
 public class SignInController {
+	/*
+	* All Rest controllers for sign in function
+	*/
 	@Autowired
 	private UsersRepository userrepo;
 	
@@ -30,11 +32,13 @@ public class SignInController {
 		return ResponseEntity.ok(this.userrepo.findAll());
 	}
 	
-	
 	// Api Example " http://localhost:8080/login?username=abc@gmail.com&password=123456 "
 	@GetMapping("/login")
-	public String login(@RequestParam("username") final String username, 
+	public String login(@RequestParam("username") final String username,
 			    @RequestParam("password") final String password) {
+		/*
+		* Login get API
+		*/
 		Optional<User> opuser = userrepo.findById(username);
 		if (!opuser.isPresent()) {
 			return "No User Exists";
@@ -43,8 +47,8 @@ public class SignInController {
 		if (user == null) {
 			throw new NullPointerException();
 		}
-		if(user.getUsername().equals(username) &&
-		   user.getPassword().equals(password)) {
+		if(user.getUsername().equals(username) 
+		   && user.getPassword().equals(password)) {
 			return "Successfull";
 		}
 		return "Invalid Credentials";
@@ -54,6 +58,9 @@ public class SignInController {
 	//  [And in body both username and password fields should be present]
 	@PostMapping("/login")
 	public String login(@RequestBody final String jsonBody) {
+		/*
+		* Login post API
+		*/
 		Object obj = JSONValue.parse(jsonBody);
 		JSONObject jsonObject = (JSONObject) obj;
 		String username = (String) jsonObject.get("username");
@@ -67,8 +74,8 @@ public class SignInController {
 		if (user == null) {
 			throw new NullPointerException();
 		}
-		if (user.getUsername().equals(username) &&
-		    user.getPassword().equals(password)) {
+		if (user.getUsername().equals(username) 
+		    && user.getPassword().equals(password)) {
 			return "Successfull";
 		}
 		return "Invalid Credentials";
