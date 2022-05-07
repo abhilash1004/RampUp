@@ -4,6 +4,6 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 import com.rampup.model.User;
 
-public interface UserCredentialsRepository extends MongoRepository<User, String>{
+public interface UsersRepository extends MongoRepository<User, String>{
 
 }
