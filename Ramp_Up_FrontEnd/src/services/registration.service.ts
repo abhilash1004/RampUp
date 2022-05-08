@@ -13,8 +13,8 @@ export class RegistrationService {
     return this.http.get("http://localhost:8080/getUsers");
   }
 
-  public addUser(user: User){
+  public addConsumer(user: User){
     const headers = { 'content-type': 'application/json'}  
-    return this.http.post<User>("http://localhost:8080/addUser", user, {'headers':headers});
+    return this.http.post<User>("http://localhost:8080/addConsumer", user, {'headers':headers});
   }
 }
