@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { ConsumerRegisterComponent } from './consumer-register/consumer-register.component';
 import { SellerRegisterComponent } from './seller-register/seller-register.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SellerRegisterComponent } from './seller-register/seller-register.compo
     HomeComponent,
     LoginComponent,
     ConsumerRegisterComponent,
-    SellerRegisterComponent
+    SellerRegisterComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +30,6 @@ import { SellerRegisterComponent } from './seller-register/seller-register.compo
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,NavbarComponent]
 })
 export class AppModule { }
