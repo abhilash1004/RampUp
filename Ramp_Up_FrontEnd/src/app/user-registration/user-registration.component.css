@@ -1,0 +1,31 @@
+
+.background-image {
+    background-image: url('https://wallpapercave.com/wp/wp6064261.jpg');
+    background-size:  cover;
+    background-repeat:  no-repeat;
+    height:  100vh;
+}
+
+.card {
+    display: block;
+    margin-left: 50px;
+    margin-top: 120px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    
+}
+
+.card:hover {
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+    box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+      0 24px 46px var(--box-shadow-color);
+  }
+
+  .card-text,.card-title{
+      text-align: center;
+  }
+
+  .card-img-top{
+    border-radius: 20px;
+  }
