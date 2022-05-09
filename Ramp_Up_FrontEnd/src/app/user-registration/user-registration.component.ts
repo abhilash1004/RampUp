@@ -31,29 +31,5 @@ export class UserRegistrationComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  changeUser(event: any){
-    this.userType?.setValue(event.target.value,{
-      onlySelf: true,
-    });
-    this.userTypeSelected = event.target.value;
-    if(this.userTypeSelected === '2: Seller'){
-      this.buttonName = 'Submit';
-    }
-    else{
-      this.buttonName = 'Register';
-    }
-  }
-
-  registerUser(){
-    console.log(this.registerForm.value);
-    this.name = this.registerForm.get('name')?.value;
-    this.username = this.registerForm.get('username')?.value;
-    this.password = this.registerForm.get('password')?.value;
-    let user = new User(this.name, this.username, this.password);
-    const response = this.registration.addUser(user);
-    response.subscribe((data) => console.log(data));
-    this.userTypeSelected = 'Consumer';
-    this.registerForm.reset();
-  }
+  
 } 

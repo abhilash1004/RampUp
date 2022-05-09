@@ -27,13 +27,13 @@ export class ConsumerRegisterComponent implements OnInit {
   }
 
 
-  registerUser(){
+  registerConsumer(){
     console.log(this.consumerRegisterForm.value);
     this.name = this.consumerRegisterForm.get('name')?.value;
     this.username = this.consumerRegisterForm.get('username')?.value;
     this.password = this.consumerRegisterForm.get('password')?.value;
     let user = new User(this.name, this.username, this.password);
-    const response = this.registration.addUser(user);
+    const response = this.registration.addConsumer(user);
     response.subscribe((data) => console.log(data));
     this.consumerRegisterForm.reset();
   }
