@@ -8,6 +8,6 @@ public class RampUpServerApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(RampUpServerApplication.class, args);
-		System.out.println("Hello World");
+		System.out.println("Ramp Up Server Started");
 	}
 }
